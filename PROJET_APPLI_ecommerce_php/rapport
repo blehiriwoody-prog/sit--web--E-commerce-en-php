@@ -1,0 +1,83 @@
+# Site E-Commerce en PHP - GOLABELSANDALE
+
+##  Description
+
+
+- Système de panier d'achat
+-  Gestion des utilisateurs (inscription/connexion)
+-  Catalogue de produits avec catégories
+-  Panel d'administration complet
+-  Gestion des commandes
+-  Design responsive et moderne
+
+## Fonctionnalités
+
+### Frontend (Client)
+- Page d'accueil avec produits vedettes
+- Catalogue de produits avec filtres par catégorie
+- Page détaillée pour chaque produit
+- Panier d'achat dynamique
+- Système d'authentification (inscription/connexion)
+- Recherche de produits
+
+### Backend (Administration)
+- Tableau de bord avec statistiques
+- Gestion des produits (CRUD)
+- Gestion des catégories
+- Gestion des commandes
+- Gestion des utilisateurs
+- Accès réservé aux administrateurs
+
+
+1. **Créer la base de données**
+   ```sql
+   CREATE DATABASE ecommerce_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+   ```
+
+2. **Configurer la base de données**
+   - Ouvrez le fichier `config/database.php`
+   - Modifiez les paramètres de connexion si nécessaire :
+   ```php
+   define('DB_HOST', 'localhost');
+   define('DB_USER', 'root');
+   define('DB_PASS', '');
+   define('DB_NAME', 'ecommerce_db');
+   ```
+
+3. **Initialiser la base de données**
+   - Accédez à : `http://localhost/ecommerce-php/index.php`
+   - Les tables seront créées automatiquement au premier chargement
+   - Un compte administrateur par défaut sera créé :
+     - **Email** : erikaroxaneblehiri@gmail.com
+     - **Mot de passe** : 300698
+
+
+##  Structure du projet
+
+```
+ecommerce-php/
+├── admin/                  # Panel d'administration
+│   ├── index.php          # Tableau de bord
+│   ├── products.php       # Gestion produits
+│   ├── categories.php     # Gestion catégories
+│   └── orders.php         # Gestion commandes
+├── config/
+│   └── database.php       # Configuration BDD
+├── includes/
+│   ├── header.php         # En-tête du site
+│   ├── footer.php         # Pied de page
+│   └── session.php        # Gestion sessions
+├── css/
+│   └── style.css          # Styles principaux
+├── js/
+│   └── main.js            # Scripts JavaScript
+├── images/                # Images du site
+├── index.php              # Page d'accueil
+├── products.php           # Liste des produits
+├── product-detail.php     # Détails d'un produit
+├── cart.php               # Panier
+├── login.php              # Connexion
+├── register.php           # Inscription
+├── logout.php             # Déconnexion
+└── README.md              # Ce fichier
+```
